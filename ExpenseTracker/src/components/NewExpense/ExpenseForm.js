@@ -19,7 +19,7 @@ const ExpenseForm = (props) => {
   };
 
   const submitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault(); //Inorder to prevent the page from reloading when form is submitted
 
     const expenseData = {
       title: enteredTitle,

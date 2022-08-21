@@ -47,7 +47,7 @@ const CourseInput = (props) => {
   };
 
   const formSubmitHandler = (event) => {
-    event.preventDefault();
+    event.preventDefault(); //Inorder to prevent the page from reloading when form is submitted
     if (enteredValue.trim().length === 0) {
       setIsValid(false);
       return;
