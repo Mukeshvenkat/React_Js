@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
@@ -29,7 +28,6 @@ const SimpleInput = (props) => {
   const formSubmissionHandler = (event) => {
     event.preventDefault();
 
-    setEnteredEmailTouched(true);
     if (!enteredNameIsValid && !enteredEmailIsValid) {
       return;
     }
@@ -76,7 +74,7 @@ const SimpleInput = (props) => {
         )}
       </div>
       <div className="form-actions">
-        <button disabled={formIsValid}>Submit</button>
+        <button disabled={!formIsValid}>Submit</button>
       </div>
     </form>
   );
